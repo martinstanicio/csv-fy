@@ -45,7 +45,7 @@ except IndexError:
 
 # output
 output_path = "output"
-today = str(date.today()).replace("-", "")
+today = date.today().strftime("%Y%m%d")
 
 # input
 url = input(access_language("question", language))
