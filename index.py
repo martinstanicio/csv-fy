@@ -66,9 +66,7 @@ except:
     pass
 
 for index, table in enumerate(tables):
-    filename = os.path.join(
-        output_path, "{1}-{2}.csv".format(output_path, today, str(uuid4().hex))
-    )
+    filename = os.path.join(output_path, "{0}-{1}.csv".format(today, str(uuid4().hex)))
     with open(filename, "w", newline="") as csvfile:
         writer = csv.writer(csvfile, quotechar='"')
         for table_row in table.children:
